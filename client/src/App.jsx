@@ -9,10 +9,10 @@ import {
 } from "lucide-react";
 import "./App.css";
 
-const API = "http://localhost:5000/api/products";
-const AUTH_API = "http://localhost:5000/api/auth";
-const MESSAGE_API = "http://localhost:5000/api/messages";
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API = `${SERVER_URL}/api/products`;
+const AUTH_API = `${SERVER_URL}/api/auth`;
+const MESSAGE_API = `${SERVER_URL}/api/messages`;
 
 const categories = [
   { name: "All", icon: Grid2X2 },
